@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.41">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/test/java/exercise/AppTest.java">
+</file>
+</checkstyle>
