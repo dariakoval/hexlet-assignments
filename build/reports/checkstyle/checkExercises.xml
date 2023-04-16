@@ -48,6 +48,16 @@
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/test/java/exercise/AppTest.java">
 </file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Item.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/main/java/exercise/App.java">
+<error line="14" column="14" severity="error" message="&apos;for&apos; child has incorrect indentation level 13, expected level should be 16." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="14" column="41" severity="error" message="&apos;;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceBeforeCheck"/>
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/test/java/exercise/AppTest.java">
+</file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/Example.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/User.java">
