@@ -11,7 +11,7 @@ class App {
         Map<String, String> result = new HashMap<>();
         if (data1.size() == 0) {
             for (String key: data2.keySet()) {
-             result.put(key, "added")   ;
+                result.put(key, "added");
             }
         } else if (data2.size() == 0) {
             for (String kye: data1.keySet()) {
