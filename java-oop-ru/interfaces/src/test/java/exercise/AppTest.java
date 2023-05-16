@@ -55,8 +55,4 @@ class AppTest {
         List<String> result = App.buildApartmentsList(apartments, 10);
         assertThat(result).isEqualTo(expected);
     }
-
-    // BEGIN
-    
-    // END
 }
