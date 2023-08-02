@@ -19,27 +19,35 @@ public class CompaniesServlet extends HttpServlet {
                 throws IOException, ServletException {
 
         // BEGIN
+        PrintWriter out = response.getWriter();
         List<String> companies = getCompanies();
         String queryString = request.getQueryString();
-        var words = queryString.trim().split("=");
-        String searchValue = words[1];
 
-        PrintWriter out = response.getWriter();
-
-        if (queryString == null || words.length == 1) {
+        if (queryString == null) {
             companies.stream()
                     .forEach(x -> out.println(x));
-        }
-        List<String> result = companies.stream()
-                .filter(x -> x.contains(searchValue))
-                .collect(Collectors.toList());
-
-
-        if (result.isEmpty()) {
-            out.println("Companies not found");
         } else {
-            for (String company : result) {
-                out.println(company);
+
+            var words = queryString.trim().split("=");
+
+            if (words.length == 1) {
+                companies.stream()
+                        .forEach(x -> out.println(x));
+            } else {
+
+                String searchValue = words[1];
+                List<String> result = companies.stream()
+                        .filter(x -> x.contains(searchValue))
+                        .collect(Collectors.toList());
+
+
+                if (result.isEmpty()) {
+                    out.println("Companies not found");
+                } else {
+                    for (String company : result) {
+                        out.println(company);
+                    }
+                }
             }
         }
         // END
