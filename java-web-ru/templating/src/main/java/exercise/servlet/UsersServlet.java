@@ -75,7 +75,9 @@ public class UsersServlet extends HttpServlet {
                 throws IOException, ServletException {
 
         // BEGIN
-        
+        request.setAttribute("users", users);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/users.jsp");
+        requestDispatcher.forward(request, response);
         // END
     }
 
@@ -95,7 +97,9 @@ public class UsersServlet extends HttpServlet {
             return;
         }
         // BEGIN
-        
+        request.setAttribute("user", user);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/show.jsp");
+        requestDispatcher.forward(request, response);
         // END
     }
 
@@ -112,7 +116,9 @@ public class UsersServlet extends HttpServlet {
             return;
         }
         // BEGIN
-        
+        request.setAttribute("user", user);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/delete.jsp");
+        requestDispatcher.forward(request, response);
         // END
     }
 
@@ -129,7 +135,8 @@ public class UsersServlet extends HttpServlet {
             return;
         }
         // BEGIN
-        
+        users.remove(user);
+        response.sendRedirect("/users");
         // END
 
     }

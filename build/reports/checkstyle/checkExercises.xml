@@ -1,146 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.41">
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Item.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Shop.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/src/test/java/exercise/AppTest.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/src/main/java/exercise/Point.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/src/main/java/exercise/Segment.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Item.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Shop.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/classes-and-objects/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/Car.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/test/java/exercise/ValidationTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/User.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/MinLength.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/demo/Item.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/Address.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/Validator.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/NotNull.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/User.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/Circle.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/RandomNumber.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/NegativeRadiusException.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/Point.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/exception/CustomException.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/exception/CustomExceptions.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/CircleTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/ErrorTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Animal.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Dog.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Frog.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/PairedTag.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/SingleTag.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/Tag.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Bmw.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Car.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Kia.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/App.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Cottage.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Flat.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Home.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/ReversedSequence.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/ToString.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/test/java/exercise/ReversedSequenceTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/builder/Car.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/Car.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/State.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/DriveState.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/LockedState.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/StartState.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/TcpConnection.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Connected.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Connection.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Disconnected.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/Car.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/examples/CsvParserExample.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/Address.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/MinLength.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/TcpConnection.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/NotNull.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Connection.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/Validator.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Disconnected.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/Car.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/src/main/java/exercise/connections/Connected.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/RandomNumber.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/StartState.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/main/java/exercise/demo/User.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/LockedState.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/reflections/src/test/java/exercise/ValidationTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/impl/DriveState.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Device.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/State.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/state/Car.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/GalaxyNote.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/builder/Car.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/IPad.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/patterns/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/IPhone.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/FileKVTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Smartphoneable.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Tabletable.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/InMemoryKVTest.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/main/java/exercise/App.java">
 </file>
@@ -148,86 +68,210 @@
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/main/java/exercise/InMemoryKV.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/main/java/exercise/KeyValueStorage.java">
-</file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/main/java/exercise/Utils.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/main/java/exercise/KeyValueStorage.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/FileKVTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Device.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/src/test/java/exercise/InMemoryKVTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/GalaxyNote.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/IPhone.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/examples/User.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/IPad.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Tabletable.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Entry.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/subtyping/examples/Smartphoneable.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/GEntry.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/App.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/IntegerStringEntry.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/User.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/User.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/Car.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Util.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/src/main/java/exercise/demo/Item.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/code-generation/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/CircleTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/examples/AppExample.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/test/java/exercise/ErrorTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/Point.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/main/java/exercise/Sorter.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/exception/CustomException.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/exception/CustomExceptions.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/test/java/exercise/SorterTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/App.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/NegativeRadiusException.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/src/main/java/exercise/Circle.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/errors/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/test/java/exercise/ReversedSequenceTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Home.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Flat.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Item.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/App.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/ToString.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/Cottage.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/src/main/java/exercise/ReversedSequence.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/User.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Bmw.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Kia.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/interfaces/examples/Car.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/Tag.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/SingleTag.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/src/main/java/exercise/PairedTag.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Dog.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Animal.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Frog.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-oop-ru/inheritance/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/src/test/java/exercise/AppTest.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/src/main/java/exercise/App.java">
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/src/main/java/exercise/Implementations.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/tests/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/maps/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lists/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/User.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/streams/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/test/java/exercise/SorterTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/main/java/exercise/Sorter.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/examples/AppExample.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/lambdas/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Item.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/other-collections/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/examples/User.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/advanced-streams/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Entry.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Util.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/IntegerStringEntry.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/User.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/GEntry.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/servlet/WelcomeServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/servlet/UsersServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/Data.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/servlet/WelcomeServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/servlet/CompaniesServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/Data.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/App.java">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/servlet/WelcomeServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/servlet/UsersServlet.java">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/examples/Example.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/test/java/exercise/AppTest.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/main/java/exercise/App.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/main/java/exercise/servlet/WelcomeServlet.java">
+</file>
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/examples/Example.java">
 </file>
 </checkstyle>
