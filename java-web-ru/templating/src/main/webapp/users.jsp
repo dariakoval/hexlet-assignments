@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!-- BEGIN -->
 
 <!DOCTYPE html>
 <html>
@@ -31,4 +30,3 @@
         </table>
     </body>
 </html>
-<!-- END -->
