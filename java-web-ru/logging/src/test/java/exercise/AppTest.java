@@ -236,7 +236,14 @@ class AppTest {
     }
 
     // BEGIN
-    
+    @Test
+    void testNewUser() throws IOException, ParseException {
+        CloseableHttpClient client = HttpClients.createDefault();
+        HttpGet request = new HttpGet(baseUrl + "/users/new");
+        CloseableHttpResponse response = client.execute(request);
+
+        assertThat(response.getCode()).isEqualTo(200);
+    }
     // END
 
     @AfterAll
