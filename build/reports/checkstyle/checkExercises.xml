@@ -230,48 +230,10 @@
 </file>
 <file name="/home/dasha/Hexlet/hexlet-assignments/java-collections-ru/generics/examples/Example.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/test/java/exercise/AppTest.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/javalin-intro/src/test/java/exercise/AppTest.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/App.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/javalin-intro/src/main/java/exercise/App.java">
 </file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/servlet/WelcomeServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/servlet/UsersServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/src/main/java/exercise/Data.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/templating/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/App.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/servlet/WelcomeServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/servlet/CompaniesServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/src/main/java/exercise/Data.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/deploy/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/App.java">
-<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/servlet/WelcomeServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/src/main/java/exercise/servlet/UsersServlet.java">
-<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/html/examples/Example.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/test/java/exercise/AppTest.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/main/java/exercise/App.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/src/main/java/exercise/servlet/WelcomeServlet.java">
-</file>
-<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/servlet/examples/Example.java">
+<file name="/home/dasha/Hexlet/hexlet-assignments/java-web-ru/javalin-intro/examples/Example.java">
 </file>
 </checkstyle>
