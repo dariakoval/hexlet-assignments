@@ -18,28 +18,11 @@ public final class App {
 
         // BEGIN
         app.get("/users", ctx -> {
-            var page = ctx.queryParam("page");
-            var per = ctx.queryParam("per");
-
-            if (page == null) {
-                page = "1";
-            }
-
-            if (per == null) {
-                per = "5";
-            }
-
-            List<Map<String, String>> users = new ArrayList<>();
-
-            int pageInt = Integer.parseInt(page);
-            int perInt = Integer.parseInt(per);
-
-            for (var i = perInt * pageInt - perInt; i < perInt * pageInt; i++) {
-                var user = USERS.get(i);
-                users.add(user);
-            }
-
-            ctx.json(users);
+            var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
+            var per = ctx.queryParamAsClass("per", Integer.class).getOrDefault(5);
+            var offset = (page - 1) * per;
+            List<Map<String, String>> sliceOfUsers = USERS.subList(offset, offset + per);
+            ctx.json(sliceOfUsers);
         });
         // END
 
