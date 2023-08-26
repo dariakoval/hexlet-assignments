@@ -1,6 +1,7 @@
 @import exercise.dto.articles.NewArticlePage
 @param NewArticlePage page
 
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,36 +13,32 @@
     <title>Hello Hexlet!</title>
 </head>
 <body>
-    <div class="mx-auto p-4 py-md-5">
-        @if(page.getErrors() != null)
-            <ul>
-                @for(var validator : page.getErrors().values())
-                    @for(var error : validator)
-                        <li>
-                            ${error.getMessage()}
-                        </li>
-                    @endfor
+@if(page.getErrors() != null)
+    <div class="mb-3">
+        <ul>
+            @for(var validator : page.getErrors().values())
+                @for(var error : validator)
+                    <li>${error.getMessage()}</li>
                 @endfor
-            </ul>
-        @endif
-
-        <form action="/articles" method="post">
-            <div class="mb-3">
-                <label class="form-label">
-                    Название статьи
-                    <input type="text" class="form-control" required name="title" value="${page.getTitle()}" />
-                </label>
-            </div>
-            <div class="mb-3">
-                <label for="content" class="form-label">
-                    Содержимое статьи
-                    <textarea id="content" class="form-control" required name="content" rows="5" cols="33">
-                        ${page.getContent()}
-                    </textarea>
-                </label>
-            </div>
-            <input type="submit" class="btn btn-primary" value="Создать" />
-        </form>
+            @endfor
+        </ul>
     </div>
+@endif
+
+<div class="mx-auto p-4 py-md-5">
+    <form action="/articles" method="post">
+        <div class="mb-3">
+            <label class="form-label">
+                Название
+                <input type="text" class="form-control" name="title" value="${page.getTitle()}" />
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Содержание</label>
+            <textarea class="form-control" rows="20" cols="70" type="text" name="content">${page.getContent()}</textarea>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Сохранить" />
+    </form>
+</div>
 </body>
 </html>
