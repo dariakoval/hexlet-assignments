@@ -2,6 +2,7 @@
 @import exercise.util.NamedRoutes
 @param LoginPage page
 
+<!-- BEGIN -->
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -13,12 +14,11 @@
     <title>Hello Hexlet!</title>
 </head>
 <body>
-@if(page.getError().length() != 0)
+@if(page.getError() != "")
     <div class="mb-3">
-        <p>${page.getError()}</p>
+        ${page.getError()}
     </div>
 @endif
-
 <div class="mx-auto p-4 py-md-5">
     <form action="${NamedRoutes.loginPath()}" method="post">
         <div class="mb-3">
@@ -30,11 +30,12 @@
         <div class="mb-3">
             <label class="form-label">
                 Пароль
-                <input type="text" class="form-control" name="password" />
+                <input type="password" class="form-control" name="password" />
             </label>
         </div>
-        <input type="submit" class="btn btn-primary" value="Сохранить" />
+        <input type="submit" class="btn btn-primary" value="Войти" />
     </form>
 </div>
 </body>
 </html>
+<!-- END -->

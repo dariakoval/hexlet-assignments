@@ -2,6 +2,7 @@
 @import exercise.util.NamedRoutes
 @param MainPage page
 
+<!-- BEGIN -->
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -13,17 +14,17 @@
     <title>Hello Hexlet!</title>
 </head>
 <body>
-<div class="mx-auto p-4 py-md-5">
-    <main>
-        @if(page.getName().toString().length() == 0)
-            <a href="${NamedRoutes.buildSessionPath()}">Войти</a>
-        @else
-            <form action="${NamedRoutes.logoutPath()}" method="post">
-                <p>Hello, ${page.getName().toString()}</p>
-                <input type="submit" class="btn btn-primary" value="Выйти" />
-            </form>
-        @endif
-    </main>
-</div>
+@if (page.getName() != null)
+    <h1 class="mb-3"> Добро пожаловать, ${page.getName().toString()}</h1>
+    <form action="${NamedRoutes.logoutPath()}" method="post">
+        <input type="submit" value="Выйти">
+    </form>
+@else
+    <h1 class="mb-3"> Добро пожаловать, гость</h1>
+    <form action="${NamedRoutes.buildSessionPath()}" method="get">
+        <input type="submit" value="Войти">
+    </form>
+@endif
 </body>
 </html>
+<!-- END -->
