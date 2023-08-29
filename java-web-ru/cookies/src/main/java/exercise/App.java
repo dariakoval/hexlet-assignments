@@ -1,6 +1,5 @@
 package exercise;
 
-import exercise.controller.PostController;
 import io.javalin.Javalin;
 import exercise.controller.CartsController;
 import exercise.util.NamedRoutes;
@@ -15,8 +14,8 @@ public final class App {
 
         app.get(NamedRoutes.rootPath(), CartsController::index);
         // BEGIN
-        app.post(NamedRoutes.addItemPath(), PostController::create);
-        app.post(NamedRoutes.clearCartPath(), PostController::clear);
+        app.post(NamedRoutes.addItemPath(), CartsController::addItem);
+        app.post(NamedRoutes.clearCartPath(), CartsController::cleanCart);
         // END
 
 
