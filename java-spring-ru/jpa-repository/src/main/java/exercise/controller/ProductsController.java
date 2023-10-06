@@ -23,15 +23,12 @@ public class ProductsController {
 
     // BEGIN
     @GetMapping(path = "")
-    public List<Product> index(@RequestParam(required = false) Integer min,
-                               @RequestParam(required = false) Integer max) {
-        if (min == null && max == null) {
-            return productRepository.findAll(Sort.by(Sort.Order.asc("price")));
-        } else if (min == null) {
-            return productRepository.findByPriceLessThan(max);
-        }
+    public List<Product> index(
+            @RequestParam(defaultValue = Integer.MIN_VALUE + "") Integer min,
+            @RequestParam(defaultValue = Integer.MAX_VALUE + "") Integer max) {
 
-        return productRepository.findByPriceBetween(min, max);
+        Sort sort = Sort.by(Sort.Order.asc("price"));
+        return productRepository.findByPriceBetween(min, max, sort);
     }
     // END
 
