@@ -6,7 +6,6 @@ import exercise.dto.ProductDTO;
 import exercise.dto.ProductUpdateDTO;
 import exercise.model.Product;
 
-import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
@@ -29,7 +28,7 @@ public abstract class ProductMapper {
     @Mapping(target = "price", source = "cost")
     @Mapping(target = "vendorCode", source = "barcode")
     public abstract ProductDTO map(Product model);
-    
+
     @Mapping(target = "cost", source = "price")
     public abstract void update(ProductUpdateDTO dto, @MappingTarget Product model);
 }
