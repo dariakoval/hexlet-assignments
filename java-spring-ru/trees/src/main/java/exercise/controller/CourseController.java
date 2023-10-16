@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -21,7 +20,7 @@ public class CourseController {
     private final CourseRepository courseRepository;
 
     @GetMapping(path = "")
-    public Iterable<Course> getCourses() {
+    public Iterable<Course> getCorses() {
         return courseRepository.findAll();
     }
 
@@ -32,16 +31,22 @@ public class CourseController {
 
     // BEGIN
     @GetMapping(path = "/{id}/previous")
-    public List<Course> getPreviousCourses(@PathVariable long id) {
-        String path = courseRepository.findById(id).getPath();
+    public Iterable<Course> getCourseParents(@PathVariable long id) {
+        Course course = courseRepository.findById(id);
+        String path = course.getPath();
+        List<Long> ids = getIds(path);
 
+        return courseRepository.findAllById(ids);
+    }
+
+    private List<Long> getIds(String path) {
         if (path == null) {
-            return new ArrayList<>();
+            return List.of();
         }
 
-        var arr = path.split("\\.");
-        return Arrays.stream(arr)
-                .map(i -> courseRepository.findById(Long.valueOf(i)).get())
+        String[] ids = path.split("\\.");
+        return Arrays.stream(ids)
+                .map(s -> Long.parseLong(s))
                 .collect(Collectors.toList());
 
     }
