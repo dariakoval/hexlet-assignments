@@ -37,7 +37,7 @@ public class UsersController {
             specifications.add(new UserSpecification(new SearchCriteria<String>("lastName", lastName)));
         }
 
-        Specification<User> userSpecification = specifications.stream()
+        Specification<User> result = specifications.stream()
                 .reduce(null, (specificationResult, specification) -> {
                     if (specificationResult == null) {
                         return specification;
@@ -45,10 +45,46 @@ public class UsersController {
                     return specificationResult.and(specification);
                 });
         if (!specifications.isEmpty()) {
-            return userRepository.findAll(userSpecification);
+            return userRepository.findAll(result);
         }
         return userRepository.findAll();
     }
+
+//    Альтернативное решение с использованием Querydsl (дополнительная задача)
+//    if (firstName == null && lastName == null) {
+//        return userRepository.findAll();
+//    }
+//
+//        if (firstName == null) {
+//        return userRepository.findAll(
+//                QUser.user.lastName.containsIgnoreCase(lastName)
+//        );
+//    }
+//
+//        if (lastName == null) {
+//        return userRepository.findAll(
+//                QUser.user.firstName.containsIgnoreCase(firstName)
+//        );
+//    }
+//
+//        return userRepository.findAll(
+//                QUser.user.firstName
+//                        .containsIgnoreCase(firstName)
+//            .and(
+//            QUser.user.lastName
+//                    .containsIgnoreCase(lastName)
+//                )
+//                        );
+
+
+
+
+//     Альтернативное решение с использованием Querydsl web support (дополнительная задача)
+//
+//     @GetMapping(path = "")
+//     public Iterable<User> getUsers(@QuerydslPredicate(root = User.class) Predicate predicate) {
+//         return userRepository.findAll(predicate);
+//     }
     // END
 }
 

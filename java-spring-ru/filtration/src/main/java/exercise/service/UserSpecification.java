@@ -19,8 +19,10 @@ public final class UserSpecification implements Specification<User> {
     @Override
     public Predicate toPredicate(Root<User> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         // BEGIN
-        return  criteriaBuilder.like(criteriaBuilder.lower(root.get(searchCriteria.getKey())),
-                "%" + searchCriteria.getValue().toString() + "%");
+        return criteriaBuilder.like(
+                criteriaBuilder.lower(root.get(searchCriteria.getKey())),
+                "%" + searchCriteria.getValue().toString().toLowerCase() + "%"
+        );
         // END
     }
 }
