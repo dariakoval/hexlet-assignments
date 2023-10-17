@@ -21,12 +21,13 @@ public class WebSecurityConfig {
     // Переопределяет схему аутентификации
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         // BEGIN
-        http.csrf().disable();
-        http.authorizeHttpRequests()
+        http.csrf().disable()
+                .authorizeHttpRequests((request) -> request
                         .requestMatchers("/").permitAll()
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
                         .anyRequest().authenticated()
-                        .and().httpBasic();
+                )
+                .httpBasic();
         return http.build();
         // END
     }
