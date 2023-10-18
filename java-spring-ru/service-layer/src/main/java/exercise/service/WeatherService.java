@@ -1,8 +1,6 @@
 package exercise.service;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import exercise.HttpClient;
-
 import java.util.Map;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
@@ -28,17 +26,27 @@ public class WeatherService {
     }
 
     // BEGIN
-    public Map<String, String> getWeather(Long id) {
-        City existingCity = this.cityRepository.findById(id)
+    public Map<String, String> lookUp(long id) {
+
+        City city = cityRepository.findById(id)
                 .orElseThrow(() -> new CityNotFoundException("City not found"));
 
-        String response = client.get("http://weather/api/v2/cities/" + existingCity.getName());
+        String cityName = city.getName();
+        String url = "http://weather/api/v2/cities/" + cityName;
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        String response = client.get(url);
+
+        Map<String, String> result;
 
         try {
-            return new ObjectMapper().readValue(response, new TypeReference<Map<String, String>>() { });
+            result = mapper.readValue(response, Map.class);
         } catch (Exception e) {
-            return null;
+            throw new RuntimeException(e);
         }
+
+        return result;
     }
     // END
 }
