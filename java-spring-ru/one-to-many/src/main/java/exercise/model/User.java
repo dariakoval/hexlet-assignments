@@ -28,7 +28,7 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
-public class User implements BaseEntity {
+public class User {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -45,7 +45,7 @@ public class User implements BaseEntity {
     private Date createdAt;
 
     // BEGIN
-    @OneToMany(mappedBy = "assignee", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "assignee", cascade = CascadeType.ALL)
     private List<Task> tasks = new ArrayList<>();
     // END
 }

@@ -23,7 +23,7 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
-public class Task implements  BaseEntity {
+public class Task {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
@@ -41,8 +41,8 @@ public class Task implements  BaseEntity {
     private Date updatedAt;
 
     // BEGIN
-    @ManyToOne
     @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
     private User assignee;
     // END
 }
