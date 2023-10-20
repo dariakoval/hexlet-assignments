@@ -27,7 +27,7 @@ public class ProductSpecification {
     }
 
     private Specification<Product> withPriceLt(Integer priceLt) {
-        return (root, query, cb) -> priceLt == null ? cb.conjunction() : cb.lessThan(root.get("price"),priceLt);
+        return (root, query, cb) -> priceLt == null ? cb.conjunction() : cb.lessThan(root.get("price"), priceLt);
     }
 
     private Specification<Product> withRatingGt(Double ratingGt) {
