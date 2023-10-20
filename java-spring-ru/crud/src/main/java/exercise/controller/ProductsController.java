@@ -5,7 +5,6 @@ import java.util.List;
 import exercise.dto.ProductCreateDTO;
 import exercise.dto.ProductDTO;
 import exercise.dto.ProductUpdateDTO;
-import exercise.exception.BadRequestException;
 import exercise.mapper.ProductMapper;
 import exercise.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,51 +33,40 @@ public class ProductsController {
     private ProductMapper productMapper;
 
     // BEGIN
-    @Autowired
-    private CategoryRepository categoryRepository;
-
     @GetMapping("")
-    @ResponseStatus(HttpStatus.OK)
     List<ProductDTO> index() {
         var products = productRepository.findAll();
-        var result = products.stream()
+
+        return products.stream()
                 .map(productMapper::map)
                 .toList();
-
-        return result;
-    }
-
-    @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    ProductDTO show(@PathVariable Long id) {
-        var product = productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Not found: " + id));
-        var productDto = productMapper.map(product);
-        return productDto;
     }
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
     ProductDTO create(@Valid @RequestBody ProductCreateDTO productData) {
         var product = productMapper.map(productData);
-        var category = categoryRepository.findById(productData.getCategoryId())
-                        .orElseThrow(() -> new BadRequestException("Bad request"));
         productRepository.save(product);
-//        product.setCategory(category);
-//        productRepository.save(product);
+        var productDto = productMapper.map(product);
+        return productDto;
+    }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    ProductDTO show(@PathVariable Long id) {
+        var product = productRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not Found: " + id));
         var productDto = productMapper.map(product);
         return productDto;
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    ProductDTO update(@Valid @RequestBody ProductUpdateDTO productData, @PathVariable Long id) {
+    ProductDTO update(@RequestBody @Valid ProductUpdateDTO productData, @PathVariable Long id) {
         var product = productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Not Found"));
-        var category = categoryRepository.findById(productData.getCategoryId().get())
-                .orElseThrow(() -> new BadRequestException("Bad request"));
+                .orElseThrow(() -> new ResourceNotFoundException("Product not Found: " + id));
+
         productMapper.update(productData, product);
-        product.setCategory(category);
         productRepository.save(product);
         var productDto = productMapper.map(product);
         return productDto;
