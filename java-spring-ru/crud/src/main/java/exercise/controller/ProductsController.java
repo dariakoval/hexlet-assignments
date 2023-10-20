@@ -63,8 +63,9 @@ public class ProductsController {
         var product = productMapper.map(productData);
         var category = categoryRepository.findById(productData.getCategoryId())
                         .orElseThrow(() -> new BadRequestException("Bad request"));
-        product.setCategory(category);
         productRepository.save(product);
+//        product.setCategory(category);
+//        productRepository.save(product);
         var productDto = productMapper.map(product);
         return productDto;
     }
