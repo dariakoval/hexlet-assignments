@@ -1,6 +1,5 @@
 package exercise;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 import java.util.logging.Level;
@@ -10,27 +9,32 @@ class App {
 
     // BEGIN
     public static Map<String, Integer> getMinMax(int[] numbers) {
-        Map<String, Integer> map = new HashMap<>();
-        MaxThread maxThread = new MaxThread(numbers);
-        maxThread.start();
-        try {
-            maxThread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        map.put("max", maxThread.getResult());
 
         MinThread minThread = new MinThread(numbers);
+        MaxThread maxThread = new MaxThread(numbers);
+
         minThread.start();
+        LOGGER.log(Level.INFO, "Thread " + minThread.getName() + " started");
+        maxThread.start();
+        LOGGER.log(Level.INFO, "Thread " + maxThread.getName() + " started");
 
         try {
             minThread.join();
+            LOGGER.log(Level.INFO, "Thread " + minThread.getName() + " finished");
+            maxThread.join();
+            LOGGER.log(Level.INFO, "Thread " + maxThread.getName() + " finished");
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            System.out.println("Поток был прерван");
         }
-        map.put("min", minThread.getResult());
 
-        return map;
+        Map result = Map.of(
+                "min", minThread.getMin(),
+                "max", maxThread.getMax()
+        );
+
+        LOGGER.log(Level.INFO, "Result: " + result.toString());
+
+        return result;
     }
     // END
 }

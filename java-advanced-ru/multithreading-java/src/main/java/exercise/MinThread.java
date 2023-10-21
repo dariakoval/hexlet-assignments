@@ -1,27 +1,30 @@
 package exercise;
 
 // BEGIN
-public class MinThread extends Thread {
-    private int[] numbers;
-    private Integer result;
+class MinThread extends Thread {
 
-    public MinThread(int[] numbers) {
+    private int[] numbers;
+    private int minimum;
+
+    MinThread(int[] numbers) {
         this.numbers = numbers;
     }
 
     @Override
     public void run() {
         int min = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] < min) {
-                min = numbers[i];
+
+        for (int currentNumber : numbers) {
+            if (currentNumber < min) {
+                min = currentNumber;
             }
         }
-        result = (Integer) min;
+
+        minimum = min;
     }
 
-    public Integer getResult() {
-        return result;
+    public int getMin() {
+        return minimum;
     }
 }
 // END
