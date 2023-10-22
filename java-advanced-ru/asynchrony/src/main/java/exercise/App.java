@@ -9,66 +9,87 @@ import java.nio.file.StandardOpenOption;
 class App {
 
     // BEGIN
-    public static CompletableFuture<String> unionFiles(String sourcePath1, String sourcePath2, String resultPath) {
+    private static Path getFullPath(String filePath) {
+        return Paths.get(filePath).toAbsolutePath().normalize();
+    }
 
-        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {
+    public static CompletableFuture<String> unionFiles(String source1, String source2, String dest) {
+
+        CompletableFuture<String> content1 = CompletableFuture.supplyAsync(() -> {
+            String content = "";
+
             try {
-                return readFile(sourcePath1);
+                content = Files.readString(getFullPath(source1));
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+            return content;
         });
 
+        CompletableFuture<String> content2 = CompletableFuture.supplyAsync(() -> {
 
-
-        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
+            String content = "";
             try {
-                return readFile(sourcePath2);
+                content = Files.readString(getFullPath(source2));
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+            return content;
         });
 
-
-
-        CompletableFuture<String> futureResult = future1.thenCombine(future2, (str1, str2) -> {
-            String result = str1 + str2;
+        return content1.thenCombine(content2, (cont1, cont2) -> {
+            String union = cont1 + cont2;
             try {
-                writeFile(resultPath, result);
+                Files.writeString(getFullPath(dest), union, StandardOpenOption.CREATE);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-            return result;
+            return "ok!";
 
         }).exceptionally(ex -> {
-            System.out.println("NoSuchFileException");
+            System.out.println("Oops! We have an exception - " + ex.getMessage());
+            return "Unknown!";
+        });
+    }
+
+    public static CompletableFuture<Long> getDirectorySize(String path) {
+
+        return CompletableFuture.supplyAsync(() -> {
+            Long size;
+            try {
+                size = Files.walk(getFullPath(path), 1)
+                        .filter(Files::isRegularFile)
+                        .mapToLong(p -> {
+                            try {
+                                return Files.size(p);
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        })
+                        .sum();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            return size;
+
+        }).exceptionally(ex -> {
+            System.out.println("Oops! We have an exception - " + ex.getMessage());
             return null;
         });
-
-        return futureResult;
     }
-
-    public static String readFile(String sourcePath) throws Exception {
-        Path path = Path.of(sourcePath).toAbsolutePath().normalize();
-        if (!Files.exists(path)) {
-            throw new Exception("File '" + path + "' does not exist");
-        }
-        return Files.readString(path);
-
-    }
-    public static void writeFile(String sourcePath, String content) throws Exception {
-        Path path = Path.of(sourcePath).toAbsolutePath().normalize();
-        Files.writeString(path, content);
-    }
-
     // END
 
     public static void main(String[] args) throws Exception {
         // BEGIN
-        unionFiles(
-                "./src/main/resources/file1.txt",
-                "./src/main/resources/file2.txt",
-                "./src/main/resources/result.txt");
+        CompletableFuture<String> result = unionFiles(
+                "src/main/resources/file1.txt",
+                "src/main/resources/file2.txt",
+                "src/main/resources/dest.txt"
+        );
+        CompletableFuture<Long> size = getDirectorySize("src/main/resources");
+        result.get();
+        System.out.println("done!");
+        System.out.println(size.get());
         // END
     }
 }
