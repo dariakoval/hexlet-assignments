@@ -7,9 +7,6 @@ class SafetyList {
     // BEGIN
     private List<Integer> array = new ArrayList<>();
 
-    public SafetyList() {
-    }
-
     public synchronized void add(Integer number) {
         array.add(number);
     }
