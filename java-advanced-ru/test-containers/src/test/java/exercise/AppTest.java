@@ -47,6 +47,74 @@ public class AppTest {
         registry.add("spring.datasource.username", database::getUsername);
         registry.add("spring.datasource.password", database::getPassword);
     }
+    @Test
+    void testGetPeople() throws Exception {
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/people"))
+                .andReturn()
+                .getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(200);
+        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
+        assertThat(response.getContentAsString()).contains("John", "Smith");
+        assertThat(response.getContentAsString()).contains("Jack", "Doe");
+    }
+
+    @Test
+    void testGetPerson() throws Exception {
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/people/1"))
+                .andReturn()
+                .getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(200);
+        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
+        assertThat(response.getContentAsString()).contains("John", "Smith");
+    }
+
+    @Test
+    void testUpdatePerson() throws Exception {
+
+        MockHttpServletResponse responsePost = mockMvc
+                .perform(
+                        patch("/people/1")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content("{\"firstName\": \"Will\", \"lastName\": \"Walker\"}")
+                )
+                .andReturn()
+                .getResponse();
+
+        assertThat(responsePost.getStatus()).isEqualTo(200);
+
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/people"))
+                .andReturn()
+                .getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(200);
+        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
+        assertThat(response.getContentAsString()).contains("Will", "Walker");
+        assertThat(response.getContentAsString()).doesNotContain("John", "Smith");
+    }
+
+    @Test
+    void testDeletePerson() throws Exception {
+        MockHttpServletResponse responsePost = mockMvc
+                .perform(delete("/people/1"))
+                .andReturn()
+                .getResponse();
+
+        assertThat(responsePost.getStatus()).isEqualTo(200);
+
+        MockHttpServletResponse response = mockMvc
+                .perform(get("/people"))
+                .andReturn()
+                .getResponse();
+
+        assertThat(response.getStatus()).isEqualTo(200);
+        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
+        assertThat(response.getContentAsString()).doesNotContain("John", "Smith");
+    }
     // END
 
     @Test
@@ -70,66 +138,5 @@ public class AppTest {
         assertThat(response.getStatus()).isEqualTo(200);
         assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
         assertThat(response.getContentAsString()).contains("Jackson", "Bind");
-    }
-
-    @Test
-    void testGetPeople() throws Exception {
-        MockHttpServletResponse response = mockMvc
-                .perform(get("/people"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(response.getStatus()).isEqualTo(200);
-        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
-    }
-
-    @Test
-    void testGetPerson() throws Exception {
-        MockHttpServletResponse response = mockMvc
-                .perform(get("/people/1"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(response.getStatus()).isEqualTo(200);
-        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
-        assertThat(response.getContentAsString()).contains("John", "Smith");
-    }
-
-    @Test
-    void testUpdatePerson() throws Exception {
-        MockHttpServletResponse responsePatch = mockMvc
-                .perform(patch("/people/2")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"firstName\": \"Dean\", \"lastName\": \"Winchester\"}"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(responsePatch.getStatus()).isEqualTo(200);
-
-        MockHttpServletResponse response = mockMvc
-                .perform(get("/people/2"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(response.getStatus()).isEqualTo(200);
-        assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
-        assertThat(response.getContentAsString()).contains("Dean", "Winchester");
-    }
-
-    @Test
-    void testDeletePerson() throws Exception {
-        MockHttpServletResponse responseDelete = mockMvc
-                .perform(delete("/people/3"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(responseDelete.getStatus()).isEqualTo(200);
-
-        MockHttpServletResponse response = mockMvc
-                .perform(get("/people"))
-                .andReturn()
-                .getResponse();
-
-        assertThat(response.getContentAsString()).doesNotContain("Jassica", "Simpson");
     }
 }
